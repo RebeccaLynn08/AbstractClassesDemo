@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,6 +49,68 @@ namespace ConsoleUI
 
             #endregion            
             Console.ReadLine();
+
+
+            var vehicle = new List<Vehicle>();
+
+            var car = new Car()
+            {
+                HasTrunk = true, 
+                Year = "2016",
+                Make = "Volkswagon",
+                Model = "Beetle",
+            };
+
+
+            var motorcycle = new Motorcycle()
+            {
+                HasSideCart = false,
+                Year = "2018",
+                Make = "Kawasaki",
+                Model = "Ninja",
+            };
+
+
+            Vehicle dirtbike = new Motorcycle()
+            {
+                HasSideCart = false,
+                Year = "2006",
+                Make = "Suzuki",
+                Model = "Nija",
+
+            };
+
+            Vehicle toycar = new Car()
+            {
+
+                HasTrunk = false,
+                Year = "1997",
+                Make = "Matchbox",
+                Model = "Mustang",
+            };
+
+
+            vehicle.Add(dirtbike);
+            vehicle.Add(car);
+            vehicle.Add(motorcycle);
+            vehicle.Add(toycar);
+
+
+            foreach (var item in vehicle)
+            {
+                Console.WriteLine(item.Year, item.Make, item.Model);
+
+            }
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
